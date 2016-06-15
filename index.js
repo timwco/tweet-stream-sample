@@ -37,7 +37,7 @@ function generateTweet () {
   return {
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. De quibus cupio scire quid sentias. Negare non possum. ' + tag,
     user: {
-      screen_name: name,
+      name: name,
       profile_image_url: 'https://randomuser.me/api/portraits/' + gender + '/' + photoId + '.jpg'
     }
   }
