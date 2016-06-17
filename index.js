@@ -59,7 +59,7 @@ io.on('connection', function(socket){
 
   setInterval( function () {
   	io.emit('newTweet', generateTweet());
-  }, 20000);
+  }, 3000);
 });
 
 // Run Server
