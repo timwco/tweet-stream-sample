@@ -23,7 +23,7 @@ const genders   = ['men', 'women'];
 const messages  = ['Congrats to all the graduates!', 'Lots of awesome projects today @theironyard Atlanta demo day!', 'Good luck to all the iron yard demo day presentors', 'About to watch some awesome presentations tonight @theironyard Atlanta', 'Looking to hire some developers, come check out TIY Atlanta\'s demo day!'];
 
 function generateTweet () {
-  let rand1 = _.random(12);
+  let rand1 = _.random(9);
   let rand2 = _.random(5, 50);
   let rand3 = _.random(1);
   let rand4 = _.random(4);
@@ -34,7 +34,6 @@ function generateTweet () {
   let photoId = rand2;
   let message = messages[rand4];
 
-  name = name ? name : 'sallyTweets';
   tag  = tag ? '#' + tag : '';
 
   return {
