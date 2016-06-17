@@ -38,7 +38,7 @@ function generateTweet () {
   tag  = tag ? '#' + tag : '';
 
   return {
-    text: message + tag,
+    text: message + ' - ' +  tag,
     user: {
       name: name,
       profile_image_url: 'https://randomuser.me/api/portraits/' + gender + '/' + photoId + '.jpg'
@@ -59,9 +59,8 @@ io.on('connection', function(socket){
   console.log('connected');
 
   setInterval( function () {
-    let tweet = generateTweet();
-  	io.emit('newTweet', tweet);
-  }, 1000);
+  	io.emit('newTweet', generateTweet());
+  }, 2000);
 });
 
 // Run Server
